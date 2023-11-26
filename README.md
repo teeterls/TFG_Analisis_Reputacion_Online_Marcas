@@ -17,6 +17,6 @@ En cuanto al contenido del repositorio, este contiene los siguientes archivos:
 + [Modelado de tópicos Tesla](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Modelado_de_To%CC%81picos_Tesla.ipynb)
 + [Modelado de tópicos Amazon-Google-Microsoft](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Modelado_de_To%CC%81picos_Amazon_Google_Microsoft.ipynb)
 + [Análisis de sentimientos](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Ana%CC%81lisis_de_sentimientos.ipynb)
-+[Análisis de sentimientos - Gráficas](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Analisis_Sentimientos_Gra%CC%81ficas_Todos_los_Conjuntos.ipynb)  
++ [Análisis de sentimientos - Gráficas](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Analisis_Sentimientos_Gra%CC%81ficas_Todos_los_Conjuntos.ipynb)  
 
 Los datos iniciales han sido extraídos del siguiente dataset de Kaggle: [Tweets about the Top Companies from 2015 to 2020](https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020/data)
