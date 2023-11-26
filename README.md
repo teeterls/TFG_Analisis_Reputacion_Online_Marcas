@@ -1,22 +1,27 @@
-# Analisis de la reputación online de varias marcas utilizando transformers
-En este proyecto se utilizan técnicas NLP de modelado de tópicos y análisis de sentimientos con transformers para analizar la reputación online de varias marcas -Apple, Tesla, Amazon, Google y Microsoft- a partir de contenido publicado en X (Twitter) entre 01-06-2019 y 01-01-2020. 
-Para el modelado de tópicos se ha utilizado el modelo [BERTopic](https://maartengr.github.io/BERTopic/index.html) (basado en BERT) diseñado específicamente para esta tarea, mientras que para el análisis de sentimientos se ha utilizado el modelo [BERTweet](https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis) (basado en RoBERTa) alojado en Huggingface, idóneo para analizar sentimiento subyacente a tweets en inglés. 
+# Online reputation analysis of several brands using transformers
+In this project, NLP techniques of topic modeling and sentiment analysis with transformers are used to analyze the online reputation of several brands - Apple, Tesla, Amazon, Google and Microsoft - from content published on X (Twitter) between 01-06-2019 and 01-01-2020. 
+For topic modeling the [BERTopic](https://maartengr.github.io/BERTopic/index.html) model (based on BERT) ,designed specifically for this task, was used, while for sentiment analysis [BERTweet](https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis) model (based on RoBERTa) hosted on Huggingface was the one used, which is suitable for analyzing sentiment underlying English tweets. 
 
-La metodología de análisis ha sido la siguiente:
-1. Selección de datos
-2. Limpieza y pre-procesamiento
-3. Análisis descriptivo de N-Gramas (unigramas, bigramas, trigramas) mediante el algoritmo TF-IDF
-4. Modelado de tópicos
-5. Análisis de sentimientos
+The analysis methodology was as follows:
+1. Data selection
+2. Cleaning and pre-processing
+3. Descriptive analysis of N-frames (unigrams, bigrams, trigrams) using the TF-IDF algorithm.
+4. Topical modeling
+5. Sentiment analysis
 
-En cuanto al contenido del repositorio, este contiene los siguientes archivos:
-- [Análisis descriptivo de datos](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Analisis_Descriptivo_Datos.ipynb) : en este archivo se cargan los datos iniciales, se realiza el filtrado temporal y por empresa y se analiza la distribución de contenido por empresa o la evolución temporal del número de tweets, entre otros. 
-* [Análisis N-Gramas Apple y Tesla](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Ana%CC%81lisis_NGramas_Apple_Tesla.ipynb) : en este archivo se realiza el análisis de N-Gramas de los conjuntos de tweets sobre Apple y Tesla, aplicando el algoritmo TF-IDF para obtener los unigramas, bigramas y trigramas más relevantes. También se visualizan los términos más repetidos mediante nubes de palabras.
-+ [Análisis N-Gramas Amazon, Google y Microsoft](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Ana%CC%81lisis_NGramas_Google_Amazon_Microsoft.ipynb) : en este archivo se repite el mismo procedimiento para el conjunto sobre Amazon-Google-Microsoft.
-+ [Modelado de tópicos Apple](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Modelado_de_To%CC%81picos_Apple.ipynb)
-+ [Modelado de tópicos Tesla](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Modelado_de_To%CC%81picos_Tesla.ipynb)
-+ [Modelado de tópicos Amazon-Google-Microsoft](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Modelado_de_To%CC%81picos_Amazon_Google_Microsoft.ipynb)
-+ [Análisis de sentimientos](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Ana%CC%81lisis_de_sentimientos.ipynb)
-+ [Análisis de sentimientos - Gráficas](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Analisis_Sentimientos_Gra%CC%81ficas_Todos_los_Conjuntos.ipynb)  
+As for the content of the repository, it contains the following files:
+- [Descriptive data analysis](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Analisis_Descriptivo_Datos.ipynb): in this file the initial data is loaded, the temporal and company filtering is performed and the content distribution by company or the temporal evolution of the number of tweets is analyzed, among others.
+  
+* [N-Grams Analysis Apple and Tesla](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Ana%CC%81lisis_NGramas_Apple_Tesla.ipynb): in this file the N-Grams analysis of the sets of tweets about Apple and Tesla is performed, applying the TF-IDF algorithm to obtain the most relevant unigrams, bigrams and trigrams. The most repeated terms are also visualized using word clouds.
+  
++ [Amazon, Google and Microsoft N-Grams analysis](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Ana%CC%81lisis_NGramas_Google_Amazon_Microsoft.ipynb): in this file the same N-Grams analysis procedure is repeated for the Amazon-Google-Microsoft set.
+  
++ [Apple topic modeling](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Modelado_de_To%CC%81picos_Apple.ipynb): this file performs the topic modeling with the BERTopic model, obtaining the optimal number of the most relevant topics about Apple. It also includes multiple visualizations included in the model, such as intertopic distance, hierarchical clustering, similarity matrix or temporal evolution of the topics along the time span.
+  
++ [Tesla topic modeling](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Modelado_de_To%CC%81picos_Tesla.ipynb): in this file the same topic modeling procedure is repeated for the Tesla ensemble.
++ [Amazon-Google-Microsoft topic modeling](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Modelado_de_To%CC%81picos_Amazon_Google_Microsoft.ipynb)::in this file the same topic modeling procedure is repeated for the Amazon-Google-Microsoft set.
 
-Los datos iniciales han sido extraídos del siguiente dataset de Kaggle: [Tweets about the Top Companies from 2015 to 2020](https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020/data)
++ [Sentiment analysis](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Ana%CC%81lisis_de_sentimientos.ipynb): this file contains the sentiment analysis of the 3 sets using the BERTweet model, in which for each tweet a positive (POS), negative (NEG) or neutral (NEU) categorization is obtained, as well as the corresponding confidence score or index.
++ [Sentiment Analysis - Graphs](https://github.com/teeterls/TFG_Analisis_Reputacion_Online_Marcas/blob/main/Analisis_Sentimientos_Gra%CC%81ficas_Todos_los_Conjuntos.ipynb): this file contains the code used for : overall distribution and temporal evolution of sentiment across sets, evolution of the model's confidence score, and distribution of sentiment and temporal evolution of sentiment for a set of relevant topics.
+
+The initial data has been extracted from the following Kaggle dataset: [Tweets about the Top Companies from 2015 to 2020](https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020/data)
